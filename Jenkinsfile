@@ -1,7 +1,7 @@
 pipeline {
 agent any
 
-```
+
 environment {
     AWS_REGION = 'ap-south-1'
     ECR_REPO = 'website-docker-demo'
