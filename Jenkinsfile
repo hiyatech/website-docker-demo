@@ -9,7 +9,7 @@ environment {
     IMAGE_TAG = "${env.BUILD_NUMBER}"
     IMAGE_URI = "${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/${ECR_REPO}:${IMAGE_TAG}"
     LATEST_URI = "${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/${ECR_REPO}:latest"
-    DEPLOY_SERVER = '13.234.119.106
+    DEPLOY_SERVER = '13.234.119.106'
 }
 
 stages {
