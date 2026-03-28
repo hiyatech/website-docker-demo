@@ -46,8 +46,8 @@ pipeline {
         stage('Push Image to ECR') {  
             steps {  
                 sh '''  
-                    docker push $IMAGE_URI  
-                    docker push $LATEST_URI  
+                    docker push 117750149494.dkr.ecr.ap-south-1.amazonaws.com/website-docker-demo:4
+docker push 117750149494.dkr.ecr.ap-south-1.amazonaws.com/website-docker-demo:latest 
                 '''  
             }  
         }  
