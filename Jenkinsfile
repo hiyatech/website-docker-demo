@@ -43,14 +43,14 @@ pipeline {
             }  
         }  
   
-        stage('Push Image to ECR') {  
-            steps {  
-                sh '''  
-                    docker push 117750149494.dkr.ecr.ap-south-1.amazonaws.com/website-docker-demo:4
-docker push 117750149494.dkr.ecr.ap-south-1.amazonaws.com/website-docker-demo:latest 
-                '''  
-            }  
-        }  
+        stage('Login to ECR') {
+    steps {
+        sh '''
+        aws ecr get-login-password --region ap-south-1 \
+        | docker login --username AWS --password-stdin 117750149494.dkr.ecr.ap-south-1.amazonaws.com
+        '''
+    }
+} 
   
         stage('Deploy to EC2') {  
             steps {  
